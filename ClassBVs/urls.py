@@ -20,6 +20,6 @@ from ClassViews import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('ClassViews.urls')),
+    path('little/', include('ClassViews.urls')),
     path('year/', views.displayYear)
 ]
