@@ -3,6 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 from django.http import HttpResponse
 from django.views import View
+from datetime import datetime
 
 class HomeView(View):
     def get(self, request):
@@ -11,3 +12,8 @@ class HomeView(View):
 class AboutView(View):
     def get(self, request):
         return render(request, 'about.html')
+    
+
+def displayYear(request):
+    todaysYear = datetime.today().year
+    return HttpResponse(todaysYear)
